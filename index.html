@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>3D Portfolio — Ichsandy Hermanto</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="dust-layer"></div>
+  <div class="container">
+
+    <!-- HEADER -->
+    <header>
+      <div class="brand">
+        <div class="logo">3D</div>
+        <div>
+          <div class="name">Ichsandy Hermanto</div>
+          <div class="subtitle">3D Artist · Modeler · Visual Designer</div>
+        </div>
+      </div>
+
+      <!-- Hire Me Button (fixed, no href) -->
+      <nav aria-label="Main navigation">
+        <a class="hire-top-btn" onclick="openModal()">Hire me</a>
+      </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+      <div>
+        <section class="hero">
+          <h1>Hi — I'm Ichsandy Hermanto. I create stylized 3D models.</h1>
+          <p class="lead">
+            I specialize in creating detailed 3D environments, props for games, base models, and visualization.
+            My work blends complete precision with fantasy artstyles of the modern era.
+          </p>
+
+          <section id="projects" class="projects">
+            <h3 style="margin-bottom:12px">3D Modeling Projects</h3>
+            <div class="grid">
+
+              <article class="card">
+                <img
+                  src="img/Shield.PNG"
+                  alt="Shield Model"
+                  class="project-image"
+                  onclick="openImage(this.src)">
+                <h4 class="project-title">Shield</h4>
+                <p class="project-desc">
+                  High-poly Fantasy shield model, created and sculpted in Blender and Maya.
+                </p>
+              </article>
+
+              <article class="card">
+                <img
+                  src="img/"
+                  alt="Modern Interior Scene"
+                  class="project-image"
+                  onclick="openImage(this.src)">
+                <h4 class="project-title">Modern Interior</h4>
+                <p class="project-desc">
+                  A render of Modern Interior design.
+                </p>
+              </article>
+
+              <article class="card">
+                <img
+                  src="img/Katana.PNG"
+                  alt="Eastern Sword"
+                  class="project-image"
+                  onclick="openImage(this.src)">
+                <h4 class="project-title">Katana</h4>
+                <p class="project-desc">
+                  An eastern-themed blade created for the purpose of posing or animating.
+                </p>
+              </article>
+
+              <article class="card">
+                <img
+                  src="img/Mushroom.PNG"
+                  alt="Mushroom"
+                  class="project-image"
+                  onclick="openImage(this.src)">
+                <h4 class="project-title">Mushroom</h4>
+                <p class="project-desc">
+                  A Mushroom plant made to be used as a mesh as an addon for a background or location.
+                </p>
+              </article>
+
+            </div>
+          </section>
+        </section>
+
+        <footer>
+          <small>© <span id="year"></span> Ichsandy Hermanto — 3D Modeling Portfolio.</small>
+        </footer>
+      </div>
+      <aside class="panel">
+        <div id="about">
+          <div class="profile">
+            <img src="img/profile.jpg" class="profile-img" alt="Profile picture">
+          </div>
+
+          <h4 style="margin-top:12px">About Me</h4>
+          <p style="color:var(--muted);font-size:14px">
+            I'm a 3D artist passionate about the creation of models from scratch — from sculpting and topology to rendering and painting.
+            I work with tools like Blender, Maya, and ZBrush to turn concepts into reality.
+          </p>
+        </div>  
+
+        <div style="margin-top:18px">
+          <div style="font-weight:700">Quick facts</div>
+          <div class="meta">
+            <div class="item"><span>Based</span><span>Jakarta, ID</span></div>
+            <div class="item"><span>Experience</span><span>2+ Years</span></div>
+            <div class="item"><span>Specialty</span><span>Base Model and Sculpting</span></div>
+            <div class="item"><span class="history-link" onclick="openHistory()">History</span>
+          </div>
+        </div>
+
+        <div style="margin-top:18px">
+          <div style="font-weight:700">Tools & Skills</div>
+          <div class="skills">
+            <div class="skill">Blender</div>
+            <div class="skill">ZBrush</div>
+            <div class="skill">Maya</div>
+            <div class="skill">Photoshop</div>
+          </div>
+        </div>
+
+        <div style="margin-top:18px" id="contact">
+          <div style="font-weight:700">Contact</div>
+          <p style="color:var(--muted);margin:8px 0 0 0;font-size:14px">Imarealawesomedude@gmail.com</p>
+          <p style="color:var(--muted);font-size:13px;margin:8px 0 0 0">Find me on 
+            <a href="https://x.com/MrChocococo" target="_blank" style="color:var(--accent);text-decoration:none">X/Twitter</a> · 
+            <a href="https://www.instagram.com/cocoiscoconotcoco/" target="_blank" style="color:var(--accent);text-decoration:none">Instagram</a>
+          </p>
+        </div>
+      </aside>
+
+    </main>
+  </div>
+
+<!-- Hire Me Modal -->
+<div id="hireModal" class="modal">
+  <div class="modal-content">
+
+    <button class="close-x" onclick="closeModal()">×</button>
+
+    <h2>Contact Me</h2>
+    <p>You can reach me directly at:</p>
+
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Imarealawesomedude@gmail.com"
+       target="_blank"
+       class="email-btn">
+      Send Email
+    </a>
+
+  </div>
+</div>
+
+<!-- History Modal -->
+<div id="historyModal" class="modal">
+  <div class="modal-content">
+
+    <button class="close-x" onclick="closeHistory()">×</button>
+
+    <h2>Education</h2>
+
+    <div class="history-entry">
+      <span class="history-school">SDN Srengseng Sawah 11</span>
+      <div class="history-year">2014 – 2020</div>
+    </div>
+
+    <div class="history-entry">
+      <span class="history-school">SMPN 253 Jakarta Selatan</span>
+      <div class="history-year">2020 – 2023</div>
+    </div>
+
+    <div class="history-entry">
+      <span class="history-school">SMK Grafika Desaputera</span>
+      <div class="history-year">2023 – 2026</div>
+    </div>
+
+  </div>
+</div>
+
+<div id="imageModal" class="modal">
+  <div class="modal-content image-modal">
+    <button class="close-x" onclick="closeImage()">×</button>
+    <img id="fullImage" src="" alt="Full view">
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
