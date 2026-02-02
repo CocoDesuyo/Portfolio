@@ -351,7 +351,7 @@ footer { text-align: center; color: var(--muted); font-size: 13px; margin-top: 3
   position: absolute;
   inset: 0;
   border-radius: 50%;
-  background-image: url("img/profile-hover.jpg");
+  background-image: url("img/Profile-hover.JPG");
   background-size: cover;
   background-position: center;
   opacity: 0;
@@ -422,4 +422,5 @@ footer { text-align: center; color: var(--muted); font-size: 13px; margin-top: 3
   font-size: 13px;
   margin-top: 2px;
 }
+
 
